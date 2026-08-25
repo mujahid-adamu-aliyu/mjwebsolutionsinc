@@ -1669,7 +1669,9 @@ form.addEventListener('submit', async (e)=>{
       if(error) throw error;
       if(profile && profile.role === 'admin'){
         setTimeout(()=>{ window.location.href = 'admin.html'; }, 900);
-      }
+      } else if(profile && profile.role === 'client'){
+        setTimeout(()=>{ window.location.href = 'portal.html'; }, 900);
+  }
       // client role: stay on homepage, toast already shown, nothing else to do
     }catch(err){
       // If the role check fails for any reason, fail safe: stay on homepage, don't redirect
