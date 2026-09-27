@@ -693,7 +693,6 @@ footer .socials .icon-btn:hover{background:var(--accent);color:#fff;border-color
 .auth-overlay{overscroll-behavior:contain}
 
 </style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -711,7 +710,6 @@ footer .socials .icon-btn:hover{background:var(--accent);color:#fff;border-color
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
     </div>
-    <button type="button" class="btn btn-outline nav-login" id="navLogin">Client Login</button>
     <a href="#contact" class="btn btn-primary nav-quote">Get a Quote</a>
     <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu"><i class="ph-bold ph-list"></i></button>
   </nav>
@@ -735,7 +733,6 @@ footer .socials .icon-btn:hover{background:var(--accent);color:#fff;border-color
   </div>
   <div class="drawer-divider"></div>
   <a href="#contact" class="btn btn-primary" id="drawerQuote">Get a Quote</a>
-  <button type="button" class="btn btn-outline" id="drawerLogin" style="margin-top:10px">Client Login</button>
   <div class="drawer-foot">
     <a class="icon-btn" href="https://wa.me/2348109983057" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ph-bold ph-whatsapp-logo"></i></a>
     <a class="icon-btn" href="https://github.com/mujahid-adamu-aliyu" target="_blank" rel="noopener" aria-label="GitHub"><i class="ph-bold ph-github-logo"></i></a>
@@ -1290,13 +1287,14 @@ form.addEventListener('submit', async (e)=>{
 });
 </script>
 
-<!-- AUTH MODAL / SHEET -->
+<!-- AUTH MODAL / SHEET REMOVED: the site is intentionally static. -->
+<!--
 <div class="auth-overlay" id="authOverlay" aria-hidden="true">
   <div class="auth-card" id="authCard" role="dialog" aria-modal="true" aria-labelledby="authTitle">
     <div class="auth-grab" id="authGrab"></div>
     <button class="auth-close" id="authClose" aria-label="Close"><i class="ph-bold ph-x"></i></button>
 
-    <!-- pinned header -->
+    pinned header removed
     <div class="auth-head">
       <h3 class="auth-title" id="authTitle">Client Portal</h3>
       <p class="auth-sub" id="authSub">Sign in to track your projects and invoices.</p>
@@ -1305,7 +1303,7 @@ form.addEventListener('submit', async (e)=>{
     <div class="auth-error" id="authError" role="alert"></div>
     <div class="auth-note" id="authNote"></div>
 
-    <!-- scrollable fields area -->
+    scrollable fields area removed
     <div class="auth-fields" id="authFields">
       <form id="authFormSignin" novalidate>
         <div class="fl" data-field="email">
@@ -1369,7 +1367,7 @@ form.addEventListener('submit', async (e)=>{
       </form>
     </div>
 
-    <!-- pinned footer: submit, google (signin/signup only), switch link -->
+    pinned footer removed
     <div class="auth-foot">
       <button type="submit" form="authFormSignin" class="auth-submit" id="siSubmit">Sign In</button>
       <button type="submit" form="authFormSignup" class="auth-submit" id="suSubmit" style="display:none">Create Account</button>
@@ -1689,6 +1687,6 @@ form.addEventListener('submit', async (e)=>{
   sb.auth.getSession().then(({ data })=>{ wasLoggedOut = !data.session; });
 })();
 
-</script>
+-->
 </body>
 </html>
